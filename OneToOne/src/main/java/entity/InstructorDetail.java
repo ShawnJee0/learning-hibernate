@@ -21,6 +21,10 @@ public class InstructorDetail {
     @Column(name = "hobby")
     private String hobby;
 
+    // add new field for instructor (also add getter and setter)
+    @OneToOne(mappedBy = "instructorDetail",cascade = CascadeType.ALL)
+    private Instructor instructor;
+
     public InstructorDetail() {
     }
 
@@ -51,6 +55,14 @@ public class InstructorDetail {
 
     public void setHobby(String hobby) {
         this.hobby = hobby;
+    }
+
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
     }
 
     @Override
