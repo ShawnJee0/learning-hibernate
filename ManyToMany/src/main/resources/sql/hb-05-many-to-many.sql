@@ -38,9 +38,9 @@ create table `course` (
 drop table if exists `student`;
 create table `student` (
                            `id` int not null auto_increment,
-                           `first_name` varchar(128) default null,
-                           `last_name` int default null,
-                           `email` int default null,
+                           `first_name` varchar(64) default null,
+                           `last_name` varchar(64)  default null,
+                           `email` varchar(128)  default null,
                            primary key (`id`)
 )engine=InnoDB auto_increment=10 default charset=latin1;
 
